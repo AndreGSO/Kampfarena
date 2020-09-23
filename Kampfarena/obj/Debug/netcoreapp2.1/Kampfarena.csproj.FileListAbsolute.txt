@@ -1,0 +1,11 @@
+I:\visual\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.deps.json
+I:\visual\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.runtimeconfig.json
+I:\visual\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.runtimeconfig.dev.json
+I:\visual\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.dll
+I:\visual\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.pdb
+I:\visual\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.csprojAssemblyReference.cache
+I:\visual\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.csproj.CoreCompileInputs.cache
+I:\visual\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfoInputs.cache
+I:\visual\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfo.cs
+I:\visual\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.dll
+I:\visual\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.pdb
