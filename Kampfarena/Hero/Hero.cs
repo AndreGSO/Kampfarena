@@ -21,10 +21,10 @@ namespace Kampfarena.Hero
             this.health = this.health - health;
         }
 
-
         public void fight(Hero hero)
         {
-            Console.WriteLine(hero.getHealth());
+            health = hero.getHealth();
+            damage = hero.damage;
         }
     }
 }
