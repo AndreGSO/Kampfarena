@@ -13,7 +13,7 @@ namespace Kampfarena
             if (HeroNumber == 1)
             {
                 Damage Hero = new Damage();
-                fight(Hero);
+                Hero.fight(Hero);
             } else if (HeroNumber == 2)
             {
                 Healer Hero = new Healer();
@@ -23,11 +23,6 @@ namespace Kampfarena
             }
             
             Console.WriteLine();
-        }
-
-        static void fight(object Hero)
-        {
-
         }
 
         static void welcome()
