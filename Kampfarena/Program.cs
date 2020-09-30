@@ -1,4 +1,5 @@
 ﻿using System;
+using Kampfarena.Hero;
 
 namespace Kampfarena
 {
@@ -7,6 +8,26 @@ namespace Kampfarena
         static void Main(string[] args)
         {
             welcome();
+            int HeroNumber = getNumber();
+
+            if (HeroNumber == 1)
+            {
+                Damage Hero = new Damage();
+                fight(Hero);
+            } else if (HeroNumber == 2)
+            {
+                Healer Hero = new Healer();
+            } else if (HeroNumber == 3)
+            {
+                Tank Hero = new Tank();
+            }
+            
+            Console.WriteLine();
+        }
+
+        static void fight(object Hero)
+        {
+
         }
 
         static void welcome()
@@ -23,13 +44,7 @@ namespace Kampfarena
             Console.WriteLine("[3] Tank");
             Console.WriteLine("Bitte wähle über die Nummern einer der verschiedenen Kämpfer aus!");
             Console.WriteLine("---");
-            
-            int HeroNumber = getNumber();
-            Console.Clear();
-            Console.WriteLine("Deine Nummer ist: "+HeroNumber);
-            
         }
-
 
         static int getNumber()
         {

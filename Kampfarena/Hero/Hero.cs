@@ -8,6 +8,17 @@ namespace Kampfarena.Hero
     {
         public int damage { get; set; }
         public int shield { get; set; }
-        public int health { get; set; }
+        // Alle Helden starten immer mit 100 Lebenspunkten
+        public int health = 100;
+
+        public int getHealth()
+        {
+            return this.health;
+        }
+
+        public void setHealth(int health)
+        {
+            this.health = this.health - health;
+        }
     }
 }
