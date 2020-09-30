@@ -19,3 +19,15 @@ I:\visual\git-kampf\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfoIn
 I:\visual\git-kampf\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfo.cs
 I:\visual\git-kampf\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.dll
 I:\visual\git-kampf\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.pdb
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.deps.json
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.runtimeconfig.json
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.runtimeconfig.dev.json
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.dll
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.pdb
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.csprojAssemblyReference.cache
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfoInputs.cache
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfo.cs
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.dll
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.pdb
+C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.genruntimeconfig.cache
