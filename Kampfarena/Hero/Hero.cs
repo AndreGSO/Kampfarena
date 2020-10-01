@@ -26,6 +26,33 @@ namespace Kampfarena.Hero
         {
             health = hero.getHealth();
             damage = hero.damage;
+            //Hier kommt der gesamte Kampfablauf rein. In einer While Schleife, solange der Held noch lebt.
+            // Das ganze passiert Rundenbasiert: Man wählt aus ->
+            //      Kämpfen -> Gegner schlagen
+            //      Item nutzen -> Gegner vergiften ODER Krit Schlag machen
+            //      Kampf Abbrechen
+        }
+
+        private void endFight(bool victory = false)
+        {
+            if (victory == true)
+            {
+                Console.Clear();
+                Console.WriteLine("Du warst Siegreich und hast die Gegner besiegt!");
+                Console.WriteLine("Du hast Kühne und Weisheit bewiesen, nun gehe und ruhe dich auf deinem Sieg aus!");
+            } else
+            {
+                Console.Clear();
+                Console.WriteLine("Die Gegner waren stark und ebenbürtig... Leider hat es nicht zum Sieg gereicht.");
+                Console.WriteLine("Ruhe dich aus und versuche es beim nächsten mal erneut!");
+            }
+        }
+
+        private void chooseOption()
+        {
+            Console.Clear();
+            Console.WriteLine("Was ist deine nächste Aktion?");
+            Console.WriteLine("");
         }
 
         public int useItem()

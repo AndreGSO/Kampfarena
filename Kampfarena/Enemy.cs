@@ -6,5 +6,6 @@ namespace Kampfarena
 {
     class Enemy
     {
+
     }
 }
