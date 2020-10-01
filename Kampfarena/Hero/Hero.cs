@@ -7,6 +7,8 @@ namespace Kampfarena.Hero
     class Hero
     {
         public int maxItem = 3;
+
+        protected static readonly Random rnd = new Random();
         public int damage { get; set; }
         public int shield { get; set; }
         // Alle Helden starten immer mit 100 Lebenspunkten

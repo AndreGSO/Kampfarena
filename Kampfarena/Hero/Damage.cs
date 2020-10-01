@@ -8,7 +8,6 @@ namespace Kampfarena.Hero
     {
         public Damage()
         {
-            Random rnd = new Random();
             this.damage = rnd.Next(5, 10);
             this.shield = rnd.Next(3, 7);
         }
