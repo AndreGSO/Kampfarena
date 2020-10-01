@@ -1,5 +1,6 @@
 ﻿using System;
 using Kampfarena.Hero;
+using Kampfarena.Item;
 
 namespace Kampfarena
 {
@@ -7,6 +8,8 @@ namespace Kampfarena
     {
         static void Main(string[] args)
         {
+            Poision b = new Poision();
+            b.usePoision(100);
             welcome();
             int HeroNumber = getNumber();
 

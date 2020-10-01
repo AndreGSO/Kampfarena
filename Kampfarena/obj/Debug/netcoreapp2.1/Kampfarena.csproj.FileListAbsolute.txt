@@ -31,3 +31,15 @@ C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfa
 C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.dll
 C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.pdb
 C:\Users\Andre\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.genruntimeconfig.cache
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.deps.json
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.runtimeconfig.json
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.runtimeconfig.dev.json
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.dll
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\bin\Debug\netcoreapp2.1\Kampfarena.pdb
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.csprojAssemblyReference.cache
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfoInputs.cache
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.AssemblyInfo.cs
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.csproj.CoreCompileInputs.cache
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.dll
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.pdb
+C:\Users\ane\Source\Repos\Kampfarena\Kampfarena\obj\Debug\netcoreapp2.1\Kampfarena.genruntimeconfig.cache
