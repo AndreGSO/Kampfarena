@@ -6,22 +6,14 @@ namespace Kampfarena.Item
 {
     class Booster: Item
     {
-        private static readonly Random random = new Random();
-        public void Item(string name)
+        public void Item()
         {
-            this.name = name;
+            this.name = "Booster";
         }
 
         public double critter()
         {
             return RandomNumberBetween(0.0, 1.0);
-        }
-
-        private static double RandomNumberBetween(double minValue, double maxValue)
-        {
-            var next = random.NextDouble();
-
-            return minValue + (next * (maxValue - minValue));
         }
     }
 }

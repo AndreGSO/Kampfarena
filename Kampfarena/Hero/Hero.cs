@@ -27,5 +27,11 @@ namespace Kampfarena.Hero
             health = hero.getHealth();
             damage = hero.damage;
         }
+
+        public int useItem()
+        {
+            //Todo: Item Verbrauch einbauen, muss immer mit dem maxItem verrechnet werden, damit man nicht unbegrenzt Items nutzen kann
+            return 0;
+        }
     }
 }
