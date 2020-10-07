@@ -8,8 +8,9 @@ namespace Kampfarena
     {
         static void Main(string[] args)
         {
-            Poision b = new Poision();
-            b.usePoision(100);
+            string[] array = { "1", "2" };
+            Console.WriteLine(GetOption(array));
+            
             welcome();
             int HeroNumber = getNumber();
 
