@@ -67,6 +67,9 @@ namespace Kampfarena
             return choose;
         }
         
+        // Mit dieser Methode kann ein UserInput validiert und in ein Int Typ umgewandelt werden
+        // Das ganze wird so oft gemacht, bis der User das richtige Zeichen eingegeben hat
+        // Dise können mittels des String Array Parameters übergeben werden
         public static int GetOption(string[] allowedOptions)
         {
             bool valid = false;
