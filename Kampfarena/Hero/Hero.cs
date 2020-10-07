@@ -54,7 +54,13 @@ namespace Kampfarena.Hero
         {
             Console.Clear();
             Console.WriteLine("Was ist deine nächste Aktion?");
-            Console.WriteLine("");
+            Console.WriteLine("[1] Gegner angreifen");
+            Console.WriteLine("[2] Item benutzen");
+            Console.WriteLine("[3] Fliehen");
+
+            string[] array = {"1", "2", "3"};
+            //int option = Program.getOption(array);
+            return 1;
         }
 
         public int useItem()
