@@ -45,6 +45,7 @@ namespace Kampfarena
             Console.WriteLine("---");
         }
 
+        //Methode kann gegen GetOption ausgetauscht werden
         static int getNumber()
         {
             int choose = 0;
