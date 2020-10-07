@@ -64,5 +64,32 @@ namespace Kampfarena
             }
             return choose;
         }
+        
+        public static int GetOption(string[] allowedOptions)
+        {
+            bool valid = false;
+            int counter = 0;
+            while (valid == false)
+            {
+                if (counter > 0)
+                {
+                    Console.WriteLine("Ungültiges Zeichen entdeckt, bitte erneut eingeben.");
+                }
+                ConsoleKeyInfo UserInput = Console.ReadKey();
+                foreach (string o in allowedOptions)
+                {
+                    if (o == UserInput.KeyChar.ToString())
+                    {
+                        if (char.IsDigit(UserInput.KeyChar))
+                        {
+                            valid = true;
+                            return int.Parse(UserInput.KeyChar.ToString());
+                        }
+                    }
+                }
+                counter++;
+            }
+            return 0;
+        }
     }
 }
