@@ -38,23 +38,23 @@ namespace Kampfarena
 
         abstract public void fight();
 
-        private void endFight(bool victory = false)
+        protected void endFight(bool victory = false)
         {
             if (victory == true)
             {
                 Console.Clear();
-                Console.WriteLine("Du warst Siegreich und hast die Gegner besiegt!");
+                Console.WriteLine("Du warst Siegreich und hast den Gegner besiegt!");
                 Console.WriteLine("Du hast Kühne und Weisheit bewiesen, nun gehe und ruhe dich auf deinem Sieg aus!");
             }
             else
             {
                 Console.Clear();
-                Console.WriteLine("Die Gegner waren stark und ebenbürtig... Leider hat es nicht zum Sieg gereicht.");
+                Console.WriteLine("Der Gegner war stark und ebenbürtig... Leider hat es nicht zum Sieg gereicht.");
                 Console.WriteLine("Ruhe dich aus und versuche es beim nächsten mal erneut!");
             }
         }
 
-        private int chooseOption()
+        protected int ChooseOption()
         {
             Console.Clear();
             Console.WriteLine("Was ist deine nächste Aktion?");
@@ -72,6 +72,25 @@ namespace Kampfarena
             //Todo: Item Verbrauch einbauen, muss immer mit dem maxItem verrechnet werden, damit man nicht unbegrenzt Items nutzen kann
             return 0;
         }
+
+        protected void Display(int ownHealth, int bossHealth)
+        {
+            Console.WriteLine("---");
+            Console.WriteLine("Dein Leben beträgt noch: "+ ownHealth + " | Der Gegener hat noch "+ bossHealth + " Lebenspunkte übrig.");
+            Console.WriteLine("Drücke eine beliebige Taste um weiter zu machen.");
+            Console.WriteLine("---");
+            Console.ReadKey();
+        }
+
+        protected int chooseEnemy()
+        {
+            Console.Clear();
+            Console.WriteLine("Wähle deine Gegnerstärke aus, wähle zwischen 1 (einfach) und 5 (sehr schwer)!");
+
+            string[] array = { "1", "2", "3", "4", "5"};
+            int option = Program.GetOption(array);
+            return option;
+        }
     }
 
     class Damage : Hero
@@ -84,9 +103,36 @@ namespace Kampfarena
         {
             int health = this.getHealth();
             bool abort = false;
+
             while (health > 0 && abort == false)
             {
+                int enemystrengt = chooseEnemy();
+                Enemy boss = new Enemy(enemystrengt);
 
+                int choose = ChooseOption();
+                if (choose == 1)
+                {
+                    Console.WriteLine("---");
+                    int damage = this.getDamage();
+                    int bossDamage = boss.getDamage();
+                    Console.WriteLine("Du greifst den Gegener an und versachst " + damage + " Schadenspunkte!");
+                    Console.WriteLine("Der Gegner greift ebenfalls an und verursacht bei dir " + bossDamage + " Schadenspunkte!");
+                    Console.WriteLine("---");
+                    boss.health = boss.health - getDamage();
+                    health = health - boss.getDamage();
+                }
+                if (choose == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Du konntest gerade so aus dem Kampf fliehen!");
+                    abort = true;
+                }
+
+                if (boss.health < 0)
+                {
+                    endFight(true);
+                    abort = true;
+                }
             }
         }
     }
@@ -112,6 +158,19 @@ namespace Kampfarena
         public override void fight()
         {
             throw new NotImplementedException();
+        }
+    }
+
+    class Enemy : Hero
+    {
+        public int level;
+        public Enemy(int level) : base(2,9)
+        {
+            this.level = level;
+        }
+
+        public override void fight()
+        { 
         }
     }
 }
