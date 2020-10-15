@@ -1,6 +1,4 @@
 ﻿using System;
-using Kampfarena.Hero;
-using Kampfarena.Item;
 
 namespace Kampfarena
 {
@@ -8,25 +6,28 @@ namespace Kampfarena
     {
         static void Main(string[] args)
         {
-            string[] array = { "1", "2" };
-            Console.WriteLine(GetOption(array));
-            
             welcome();
-            int HeroNumber = getNumber();
+
+            string[] allowdHeroNumbers = new string[] { "1", "2", "3" };
+            int HeroNumber = GetOption(allowdHeroNumbers);
+
+            Hero Hero;
 
             if (HeroNumber == 1)
             {
-                Damage Hero = new Damage();
-                Hero.fight(Hero);
+                Hero = new Damage();
             } else if (HeroNumber == 2)
             {
-                Healer Hero = new Healer();
+                Hero = new Healer();
             } else if (HeroNumber == 3)
             {
-                Tank Hero = new Tank();
+                Hero = new Tank();
+            } else
+            {
+                throw new ArgumentException();
             }
-            
-            Console.WriteLine();
+
+            Hero.fight();
         }
 
         static void welcome()
@@ -45,27 +46,6 @@ namespace Kampfarena
             Console.WriteLine("---");
         }
 
-        //Methode kann gegen GetOption ausgetauscht werden
-        static int getNumber()
-        {
-            int choose = 0;
-            bool tester = false;
-
-            while (tester == false)
-            {
-                ConsoleKeyInfo UserInput = Console.ReadKey();
-
-                if (char.IsDigit(UserInput.KeyChar))
-                {
-                    choose = int.Parse(UserInput.KeyChar.ToString());
-                    if ((choose == 1) || (choose == 2) || (choose == 3))
-                    {
-                        tester = true;
-                    }
-                }
-            }
-            return choose;
-        }
         
         // Mit dieser Methode kann ein UserInput validiert und in ein Int Typ umgewandelt werden
         // Das ganze wird so oft gemacht, bis der User das richtige Zeichen eingegeben hat
