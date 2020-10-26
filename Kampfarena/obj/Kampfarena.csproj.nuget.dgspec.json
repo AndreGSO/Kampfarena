@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Andre\\Source\\Repos\\KampfarenaNew\\Kampfarena\\Kampfarena.csproj": {}
+    "C:\\Users\\ane\\Desktop\\arena\\Kampfarena\\Kampfarena.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Andre\\Source\\Repos\\KampfarenaNew\\Kampfarena\\Kampfarena.csproj": {
+    "C:\\Users\\ane\\Desktop\\arena\\Kampfarena\\Kampfarena.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Andre\\Source\\Repos\\KampfarenaNew\\Kampfarena\\Kampfarena.csproj",
+        "projectUniqueName": "C:\\Users\\ane\\Desktop\\arena\\Kampfarena\\Kampfarena.csproj",
         "projectName": "Kampfarena",
-        "projectPath": "C:\\Users\\Andre\\Source\\Repos\\KampfarenaNew\\Kampfarena\\Kampfarena.csproj",
-        "packagesPath": "C:\\Users\\Andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Andre\\Source\\Repos\\KampfarenaNew\\Kampfarena\\obj\\",
+        "projectPath": "C:\\Users\\ane\\Desktop\\arena\\Kampfarena\\Kampfarena.csproj",
+        "packagesPath": "C:\\Users\\ane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ane\\Desktop\\arena\\Kampfarena\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ane\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

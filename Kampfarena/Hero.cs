@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Kampfarena
 {
+    //Abstraktion, Übergeordnete Klasse Hero
     abstract class Hero
     {
         public int maxItem = 3;
@@ -36,8 +37,10 @@ namespace Kampfarena
             this.health = this.health - health;
         }
 
+        // Abstrakte Klasse fight, wird theoretisch in allen Subklassen gebraucht, deswegen abstract
         abstract public void fight();
 
+        // Endausgabe beim Kampf, jenachdem ob man Siegreich oder nicht ist
         protected void endFight(bool victory = false)
         {
             if (victory == true)
@@ -54,24 +57,19 @@ namespace Kampfarena
             }
         }
 
+        // Methode für was man als nächstes machen will
         protected int ChooseOption()
         {
             Console.Clear();
             Console.WriteLine("Was ist deine nächste Aktion?");
             Console.WriteLine("[1] Gegner angreifen");
-            Console.WriteLine("[2] Item benutzen");
-            Console.WriteLine("[3] Fliehen");
+            Console.WriteLine("[2] Fliehen");
 
-            string[] array = { "1", "2", "3" };
+            string[] array = { "1", "2"};
             int option = Program.GetOption(array);
             return option;
         }
 
-        public int useItem()
-        {
-            //Todo: Item Verbrauch einbauen, muss immer mit dem maxItem verrechnet werden, damit man nicht unbegrenzt Items nutzen kann
-            return 0;
-        }
 
         protected void Display(int ownHealth, int bossHealth)
         {
@@ -95,7 +93,7 @@ namespace Kampfarena
 
     class Damage : Hero
     {
-        public Damage() : base(5, 10)
+        public Damage() : base(5, 9)
         {
         }
 
@@ -103,32 +101,45 @@ namespace Kampfarena
         {
             int health = this.getHealth();
             bool abort = false;
+            int enemystrengt = chooseEnemy();
+            Enemy boss = new Enemy(enemystrengt);
+            int bosshealth = boss.getHealth();
 
             while (health > 0 && abort == false)
             {
-                int enemystrengt = chooseEnemy();
-                Enemy boss = new Enemy(enemystrengt);
-
+                
                 int choose = ChooseOption();
+
+                // Hauptaktion, Angriff ->
+                //      Der Schaden wird berechnet, Random Werte zwischen Grenzen
+                //      Text wird ausgegeben, wer wie viel Schaden gemacht hat und wie viel Leben übrig bleibt
+                //      Schäden werden mit Leben verrechnet
                 if (choose == 1)
                 {
-                    Console.WriteLine("---");
+                    // Schadensberechnung
                     int damage = this.getDamage();
                     int bossDamage = boss.getDamage();
+                    // Ausgabe
                     Console.WriteLine("Du greifst den Gegener an und versachst " + damage + " Schadenspunkte!");
                     Console.WriteLine("Der Gegner greift ebenfalls an und verursacht bei dir " + bossDamage + " Schadenspunkte!");
                     Console.WriteLine("---");
-                    boss.health = boss.health - getDamage();
-                    health = health - boss.getDamage();
+                    //Boss Leben
+                    bosshealth = bosshealth - damage;
+                    //Spieler Leben
+                    health = health - bossDamage;
+                    //Anzeige
+                    this.Display(health, bosshealth);
                 }
+                // Wenn man aus dem Kampf fliehen möchte
                 if (choose == 3)
                 {
                     Console.Clear();
                     Console.WriteLine("Du konntest gerade so aus dem Kampf fliehen!");
                     abort = true;
                 }
-
-                if (boss.health < 0)
+                
+                // Ist der Boss besiegt, so wird der Kampf beendet
+                if (bosshealth <= 0)
                 {
                     endFight(true);
                     abort = true;
@@ -145,7 +156,52 @@ namespace Kampfarena
 
         public override void fight()
         {
-            throw new NotImplementedException();
+            int health = this.getHealth();
+            bool abort = false;
+            int enemystrengt = chooseEnemy();
+            Enemy boss = new Enemy(enemystrengt);
+            int bosshealth = boss.getHealth();
+
+            while (health > 0 && abort == false)
+            {
+
+                int choose = ChooseOption();
+
+                // Hauptaktion, Angriff ->
+                //      Der Schaden wird berechnet, Random Werte zwischen Grenzen
+                //      Text wird ausgegeben, wer wie viel Schaden gemacht hat und wie viel Leben übrig bleibt
+                //      Schäden werden mit Leben verrechnet
+                if (choose == 1)
+                {
+                    // Schadensberechnung
+                    int damage = this.getDamage();
+                    int bossDamage = boss.getDamage();
+                    // Ausgabe
+                    Console.WriteLine("Du greifst den Gegener an und versachst " + damage + " Schadenspunkte!");
+                    Console.WriteLine("Der Gegner greift ebenfalls an und verursacht bei dir " + bossDamage + " Schadenspunkte!");
+                    Console.WriteLine("---");
+                    //Boss Leben
+                    bosshealth = bosshealth - damage;
+                    //Spieler Leben
+                    health = health - bossDamage;
+                    //Anzeige
+                    this.Display(health, bosshealth);
+                }
+                // Wenn man aus dem Kampf fliehen möchte
+                if (choose == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Du konntest gerade so aus dem Kampf fliehen!");
+                    abort = true;
+                }
+
+                // Ist der Boss besiegt, so wird der Kampf beendet
+                if (bosshealth <= 0)
+                {
+                    endFight(true);
+                    abort = true;
+                }
+            }
         }
     }
 
@@ -157,16 +213,63 @@ namespace Kampfarena
 
         public override void fight()
         {
-            throw new NotImplementedException();
+            int health = this.getHealth();
+            bool abort = false;
+            int enemystrengt = chooseEnemy();
+            Enemy boss = new Enemy(enemystrengt);
+            int bosshealth = boss.getHealth();
+
+            while (health > 0 && abort == false)
+            {
+
+                int choose = ChooseOption();
+
+                // Hauptaktion, Angriff ->
+                //      Der Schaden wird berechnet, Random Werte zwischen Grenzen
+                //      Text wird ausgegeben, wer wie viel Schaden gemacht hat und wie viel Leben übrig bleibt
+                //      Schäden werden mit Leben verrechnet
+                if (choose == 1)
+                {
+                    // Schadensberechnung
+                    int damage = this.getDamage();
+                    int bossDamage = boss.getDamage();
+                    // Ausgabe
+                    Console.WriteLine("Du greifst den Gegener an und versachst " + damage + " Schadenspunkte!");
+                    Console.WriteLine("Der Gegner greift ebenfalls an und verursacht bei dir " + bossDamage + " Schadenspunkte!");
+                    Console.WriteLine("---");
+                    //Boss Leben
+                    bosshealth = bosshealth - damage;
+                    //Spieler Leben
+                    health = health - bossDamage;
+                    //Anzeige
+                    this.Display(health, bosshealth);
+                }
+                // Wenn man aus dem Kampf fliehen möchte
+                if (choose == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Du konntest gerade so aus dem Kampf fliehen!");
+                    abort = true;
+                }
+
+                // Ist der Boss besiegt, so wird der Kampf beendet
+                if (bosshealth <= 0)
+                {
+                    endFight(true);
+                    abort = true;
+                }
+            }
         }
     }
 
     class Enemy : Hero
     {
         public int level;
-        public Enemy(int level) : base(2,9)
+        // Jenachdem was der User für ein Level angibt, ist der Gegner stärker = höheres Leben
+        public Enemy(int level) : base(3,9)
         {
             this.level = level;
+            this.health = this.health * level;
         }
 
         public override void fight()
